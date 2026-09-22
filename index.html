@@ -283,6 +283,17 @@ img{display:block}
 .shell{width:100%;max-width:880px;margin:auto;padding:clamp(14px,2vw,26px)}
 body{display:flex;align-items:flex-start;justify-content:center}
 
+/* The 560px ceiling in .screen's min-height is a desktop guard: it stops the
+   card becoming absurdly tall on a wide monitor. On a phone the screen is tall
+   and narrow, so that ceiling is reached immediately and everything below it is
+   dead space. Here the card grows to fill instead. dvh rather than vh so a
+   collapsing mobile address bar does not leave a strip of background behind. */
+@media(max-width:900px),(orientation:portrait){
+  body{align-items:stretch;min-height:100dvh}
+  .shell{margin:0 auto;display:flex;flex-direction:column}
+  .screen{flex:1 0 auto}
+}
+
 /* Nav ------------------------------------------------------------------- */
 .nav{position:absolute;left:clamp(22px,3vw,50px);right:clamp(22px,3vw,50px);
      bottom:clamp(58px,4.6vw,70px);display:flex;align-items:center;
