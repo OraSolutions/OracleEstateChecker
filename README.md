@@ -15,33 +15,11 @@ runs and to where those applications are hosted.
 
 Open `index.html` in any browser. No build step, no dependencies, single file.
 
-## Before publishing
-
-Two constants at the top of the `<script>` block in `index.html`:
-
-```js
-const LINK_EVENT = "#";   // scheduling page for the AI World meeting room
-const BOOTH      = "";    // booth number in the AI World Hub
-```
-
-Left unset, both render as visible gold placeholders, so the tool cannot go
-live with a dead button by accident.
-
-Also confirm DXC brand and marcom approval for public hosting.
-
 ## Design system
 
 Built on the DXC Oracle AI Agent Portfolio web design system: token layer,
 fluid type scale, six named surfaces, act rail, journey stepper, maturity
 bars, stage cards and drill-down sheet.
-
-This follows the portfolio web system, not the DXC PPTX generation rules.
-The portfolio itself already departs from those rules, and GT Standard L
-Extended cannot lawfully be embedded as base64 in a public file. Headings
-are Inter 800 with tightened letter-spacing, as in the portfolio.
-
-Inter is bundled as base64 in five weights (300, 400, 600, 700, 800).
-The page makes no network requests of any kind and works offline.
 
 ## Privacy
 
